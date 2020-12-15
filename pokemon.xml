@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!--   Pokemon catalogue-->
+<!--   Author: Sriwan Khaomuang-->
+<!--   Date:   12/14/2020-->
+
+<!--   Filename: pokemon.xml-->
+
+<?xml-stylesheet type="text/xsl" href="pokemon.xsl" ?>
+
+<pokedex>
+
+    <pokemon name="Electabuzz">
+        <types>
+            <type>ELECTRIC</type>
+        </types>
+        <species>Electric Pokémon</species>
+        <gen>1</gen>
+        <abilities hidden="Vital Spirit">
+            <ability>Static</ability>
+        </abilities>
+        <baseExp>172</baseExp>
+        <growthRate>Medium Fast</growthRate>
+    </pokemon>
+
+    <pokemon name="Pikachu">
+        <types>
+            <type>ELECTRIC</type>
+        </types>
+        <species>Mouse Pokémon</species>
+        <gen>1</gen>
+        <abilities hidden="Lightning Rod">
+            <ability>Static</ability>
+        </abilities>
+        <baseExp>112</baseExp>
+        <growthRate>Medium Fast</growthRate>
+    </pokemon>
+
+
+    <pokemon name="Lanturn">
+        <types>
+            <type>WATER</type>
+            <type>ELECTRIC</type>
+        </types>
+        <species>Light Pokémon</species>
+        <gen>2</gen>
+        <abilities hidden="Water Absorb">
+            <ability>Illuminate</ability>
+            <ability>Volt Absorb</ability>
+        </abilities>
+        <baseExp>161</baseExp>
+        <growthRate>Slow</growthRate>
+    </pokemon>
+
+
+    <pokemon name="Ampharos">
+        <types>
+            <type>ELECTRIC</type>
+        </types>
+        <species>Light Pokémon</species>
+        <gen>2</gen>
+        <abilities hidden="Plus">
+            <ability>Static</ability>
+        </abilities>
+        <baseExp>230</baseExp>
+        <growthRate>Medium Slow</growthRate>
+    </pokemon>
+
+
+    <pokemon name="Galvantula">
+        <types>
+            <type>ELECTRIC</type>
+            <type>BUG</type>
+        </types>
+        <species>EleSpider Pokémon</species>
+        <gen>5</gen>
+        <abilities hidden="Swarm">
+            <ability>Compound Eyes</ability>
+            <ability>Unnerve</ability>
+        </abilities>
+        <baseExp>165</baseExp>
+        <growthRate>Medium Fast</growthRate>
+    </pokemon>
+
+
+    <pokemon name="Zeraora">
+        <types>
+            <type>ELECTRIC</type>
+            <type>BUG</type>
+        </types>
+        <species>Thunderclap Pokémon</species>
+        <gen>7</gen>
+        <abilities>
+            <ability>Volt Absorb</ability>
+        </abilities>
+        <baseExp>270</baseExp>
+        <growthRate>Slow</growthRate>
+    </pokemon>
+
+
+</pokedex>

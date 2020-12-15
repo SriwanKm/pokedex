@@ -1,0 +1,65 @@
+body {
+    background-color: gainsboro;
+    margin: 0;
+}
+
+#pokeball {
+    height: 60px;
+    margin-top: 15px;
+}
+
+#logo {
+    height: 80px
+}
+
+header {
+    background-color: #fbc764;
+    height: 100px;
+    padding: 10px 0 0 20px;
+    border-bottom: #b2b3b3 8px solid;
+
+}
+
+.menu-icon {
+    width: 40px
+}
+
+div {
+    display: flex;
+}
+
+table {
+    text-align: center;
+}
+
+#menu-table tr td {
+    padding: 0 40px;
+
+}
+
+.menu {
+    margin-left: 45%;
+}
+
+.pic {
+    height: 270px;
+}
+
+#data-table {
+    margin: 50px auto;
+    width: 1000px;
+    border-spacing: 50px 50px;
+
+}
+
+#data-table tr td {
+    background-color: #408e8e;
+    border: dimgray solid 5px;
+    border-radius: 10px;
+}
+
+a {
+    padding-top: 10px;
+    text-decoration: none;
+    display: table-caption;
+}
