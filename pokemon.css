@@ -17,11 +17,24 @@ header {
     height: 100px;
     padding: 10px 0 0 20px;
     border-bottom: #b2b3b3 8px solid;
+    font-family: 'Press Start 2P', cursive;
+
 
 }
 
-.menu-icon {
-    width: 40px
+.menu-icon img {
+    width: 40px;
+    padding-bottom: 10px;
+}
+
+
+.menu-icon a {
+    padding-bottom: 10px;
+}
+
+.menu-icon:hover {
+    background-color: gainsboro;
+    border-radius: 25px;
 }
 
 div {
@@ -38,8 +51,10 @@ table {
 }
 
 .menu {
-    margin-left: 45%;
+    margin-left: 500px;
+
 }
+
 
 .pic {
     height: 270px;
@@ -52,14 +67,43 @@ table {
 
 }
 
-#data-table tr td {
-    background-color: #408e8e;
+#data-table tr .outer {
+    background-color: #67af82;
     border: dimgray solid 5px;
     border-radius: 10px;
+    padding: 10px;
+
 }
 
 a {
     padding-top: 10px;
     text-decoration: none;
     display: table-caption;
+}
+
+.sub-dataTable {
+    margin: auto;
+    text-align: left;
+    font-size: small;
+}
+
+.sub-dataTable th {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    padding: 20px;
+    color: #ffffff;
+    background-color: teal;
+    font-size: large;
+}
+
+.sub-dataTable td:nth-child(odd) {
+    /*font-family: 'Bungee', cursive;*/
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+.sub-dataTable td:nth-child(even) {
+    /*font-family: 'Press Start 2P', cursive;*/
+
+    font-family: 'Prompt', sans-serif;
 }
