@@ -57,24 +57,14 @@
 
                 <section>
                     <div>
-                        <table id="data-table">
-                            <tr>
+<!--                        <div id="data-table">-->
+                            <div id="grid-container">
 
                             <xsl:apply-templates select="pokedex/pokemon">
                                 <xsl:sort select="gen"/>
                             </xsl:apply-templates>
 
-                            </tr>
-
-                            <tr>
-
-                                <xsl:apply-templates select="pokedex/pokemon">
-                                    <xsl:sort select="gen"/>
-                                </xsl:apply-templates>
-
-                            </tr>
-
-                        </table>
+                        </div>
                     </div>
                 </section>
                 <footer>
@@ -87,7 +77,7 @@
 
     <xsl:template match="pokemon">
 
-            <td class="outer-electric">
+            <div class="outer-electric">
 
                 <table class="sub-dataTable">
 
@@ -150,9 +140,9 @@
                         </td>
                     </tr>
                 </table>
-            </td>
+            </div>
+
 
     </xsl:template>
-
 
 </xsl:stylesheet>

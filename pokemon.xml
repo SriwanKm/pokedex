@@ -45,7 +45,7 @@
         <types>
             <type>ELECTRIC</type>
         </types>
-        <species>Thunder Pokémon</species>
+        <species>Thunder</species>
         <gen>2</gen>
         <abilities hidden="Inner Focus">
             <ability>Pressure</ability>
@@ -78,7 +78,7 @@
             <type>ELECTRIC</type>
             <type>BUG</type>
         </types>
-        <species>EleSpider Pokémon</species>
+        <species>EleSpider</species>
         <gen>5</gen>
         <abilities hidden="Swarm">
             <ability>Compound Eyes</ability>
@@ -86,7 +86,7 @@
         </abilities>
         <baseExp>165</baseExp>
         <growthRate>Medium Fast</growthRate>
-        <img>dracozolt.jpg</img>
+        <img>zeraora.jpg</img>
 
 
     </pokemon>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&family=Prompt&display=swap');
 
 
 body {
@@ -75,13 +75,20 @@ table {
     margin-bottom: 10px;
 }
 
-#data-table {
+#data-table, #grid-container {
     margin: 50px auto;
     width: 1000px;
     border-spacing: 50px 50px;
 }
 
-#data-table tr .outer-electric {
+#grid-container {
+    margin: 100px 0 50px 190px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px 50px;
+}
+
+#grid-container .outer-electric {
     background-color: #e5db78;
     border: dimgray solid 5px;
     border-radius: 10px;
@@ -109,7 +116,7 @@ table {
     padding: 10px;
 }
 
-#data-table tr .outer-fairy:hover, #data-table tr .outer-water:hover, #data-table tr .outer-grass:hover, #data-table tr .outer-electric:hover {
+#data-table tr .outer-fairy:hover, #data-table tr .outer-water:hover, #data-table tr .outer-grass:hover, #grid-container .outer-electric:hover {
     box-shadow: #2b2b2b 0px 3px 8px 5px;
 }
 
