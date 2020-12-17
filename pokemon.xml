@@ -21,6 +21,8 @@
         </abilities>
         <baseExp>172</baseExp>
         <growthRate>Medium Fast</growthRate>
+        <img>electabuzz.jpg</img>
+
     </pokemon>
 
     <pokemon name="Pikachu">
@@ -34,36 +36,40 @@
         </abilities>
         <baseExp>112</baseExp>
         <growthRate>Medium Fast</growthRate>
+        <img>pikachu.jpg</img>
+
     </pokemon>
 
 
-    <pokemon name="Lanturn">
+    <pokemon name="Raikou">
         <types>
-            <type>WATER</type>
             <type>ELECTRIC</type>
         </types>
-        <species>Light Pokémon</species>
+        <species>Thunder Pokémon</species>
         <gen>2</gen>
-        <abilities hidden="Water Absorb">
-            <ability>Illuminate</ability>
-            <ability>Volt Absorb</ability>
+        <abilities hidden="Inner Focus">
+            <ability>Pressure</ability>
         </abilities>
-        <baseExp>161</baseExp>
+        <baseExp>261</baseExp>
         <growthRate>Slow</growthRate>
+        <img>raikou.jpg</img>
+
     </pokemon>
 
 
-    <pokemon name="Ampharos">
+    <pokemon name="Pincurchin">
         <types>
             <type>ELECTRIC</type>
         </types>
-        <species>Light Pokémon</species>
-        <gen>2</gen>
-        <abilities hidden="Plus">
-            <ability>Static</ability>
+        <species>Sea Urchin</species>
+        <gen>8</gen>
+        <abilities hidden="Electric Surge">
+            <ability>Lightning Rod</ability>
         </abilities>
-        <baseExp>230</baseExp>
-        <growthRate>Medium Slow</growthRate>
+        <baseExp>-</baseExp>
+        <growthRate>Medium Fast</growthRate>
+        <img>pincurchin.jpg</img>
+
     </pokemon>
 
 
@@ -80,6 +86,9 @@
         </abilities>
         <baseExp>165</baseExp>
         <growthRate>Medium Fast</growthRate>
+        <img>dracozolt.jpg</img>
+
+
     </pokemon>
 
 
@@ -89,12 +98,15 @@
             <type>BUG</type>
         </types>
         <species>Thunderclap Pokémon</species>
-        <gen>7</gen>
-        <abilities>
+        <gen>8</gen>
+        <abilities hidden="-">
             <ability>Volt Absorb</ability>
         </abilities>
         <baseExp>270</baseExp>
         <growthRate>Slow</growthRate>
+        <img>zeraora.jpg</img>
+
+
     </pokemon>
 
 

@@ -11,96 +11,148 @@
 
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <xsl:output method="html"
-                doctype-system="about:legacy-compat"
-                encoding="UTF-8"
-                indent="yes"/>
+    <xsl:output method="html" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes"/>
 
-<!--    <xsl:variable name="currentYear" select="2020"/>-->
+    <!--    <xsl:variable name="currentYear" select="2020"/>-->
 
     <xsl:template match="/">
-        <html>
+        <html lang="en">
             <head>
+                <meta charset="UTF-8"/>
                 <title>Electric Pokemon</title>
-                <link href="pokemon.css"
-                      rel="stylesheet" type="text/css"/>
+                <link rel="stylesheet" type="text/css" href="pokemon.css"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com"/>
             </head>
             <body>
                 <header>
-                    <h1>Electric Pokemon</h1>
+                    <div>
+                        <div>
+                            <img id="pokeball" alt="logo" src="images/pokeball.png"/>
+                            <img id="logo" alt="logo" src="images/pokemon_text.png"/>
+                        </div>
+                        <div class="menu">
+                            <table id="menu-table">
+                                <tr>
+                                    <td class="menu-icon">
+                                        <a href="pokemon.xml"><img alt="elec" src="images/pikachu.png"/>Electric
+                                        </a>
+                                    </td>
+                                    <td class="menu-icon">
+                                        <a href="grass.html"><img alt="grass" src="images/caterpie.png"/>Grass
+                                        </a>
+                                    </td>
+                                    <td class="menu-icon">
+                                        <a href="water.html"><img alt="water" src="images/dratini.png"/>Water
+                                        </a>
+                                    </td>
+                                    <td class="menu-icon">
+                                        <a href="fairy.html"><img alt="psychic" src="images/jigglypuff.png"/>Fairy
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </header>
+
                 <section>
-                    <h1>Pokemon</h1>
-                    <xsl:apply-templates select="pokedex/pokemon">
-                        <xsl:sort select="pokemon att='name'"/>
-                    </xsl:apply-templates>
+                    <div>
+                        <table id="data-table">
+                            <tr>
+
+                            <xsl:apply-templates select="pokedex/pokemon">
+                                <xsl:sort select="gen"/>
+                            </xsl:apply-templates>
+
+                            </tr>
+
+                            <tr>
+
+                                <xsl:apply-templates select="pokedex/pokemon">
+                                    <xsl:sort select="gen"/>
+                                </xsl:apply-templates>
+
+                            </tr>
+
+                        </table>
+                    </div>
                 </section>
+                <footer>
+                    By Sriwan Khaomuang
+                </footer>
             </body>
         </html>
     </xsl:template>
 
+
     <xsl:template match="pokemon">
-        <article>
-            <h1>
-                <xsl:value-of select="pokemon att='name'"/>
-            </h1>
-            <h2>
-                Type(s)
-                <xsl:for-each select="types/type">
 
-                    <xsl:value-of select="."/>
+            <td class="outer-electric">
 
-                </xsl:for-each>
-            </h2>
-            <p>
-                Species:
-                <span>
-                    <xsl:for-each select="species">
-                        <xsl:value-of select="."/>/
-                    </xsl:for-each>
-                </span>
-            </p>
-            <table>
+                <table class="sub-dataTable">
 
-                <tr>
-                    <td>
-                        <xsl:value-of select="format-number(purchased/price, '$#,#0.00') "/>
-                    </td>
-                    <td>
-                        <xsl:value-of select="purchased/location"/>
-                    </td>
-                    <td>
-                        <xsl:value-of select="year"/>
-                    </td>
-                    <td>
-                        <xsl:value-of select="$currentYear - year"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="4">
-                        <p>My Rating:</p>
-                        <xsl:call-template name="drawStars">
-                            <xsl:with-param name="starFile" select="'star.png'"/>
-                            <xsl:with-param name="starCount" select="rating"/>
-                        </xsl:call-template>
-                    </td>
-                </tr>
-            </table>
-        </article>
+                    <tr>
+                        <th id="electric" colspan="2">
+                            <xsl:value-of select="@name"/>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <img class="pic" src="images/{img}" alt="{img}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Generation</td>
+                        <td>
+                            <xsl:value-of select="gen"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td>
+                            <xsl:for-each select="types/type">
+                                <xsl:value-of select="."/>
+                            </xsl:for-each>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Species</td>
+                        <td>
+                            <xsl:value-of select="species"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Abilities</td>
+                        <td>
+                            <xsl:for-each select="abilities/ability">
+                                <xsl:value-of select="."/>
+                            </xsl:for-each>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Hidden ability</td>
+                        <td>
+                            <xsl:value-of select="abilities/@hidden"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Base Exp.</td>
+                        <td>
+                            <xsl:value-of select="baseExp"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Growth Rate</td>
+                        <td>
+                            <xsl:value-of select="growthRate"/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
     </xsl:template>
 
-    <xsl:template name="drawStars">
-
-        <xsl:param name="starFile"/>
-        <xsl:param name="starCount"/>
-
-        <xsl:if test="$starCount > 0">
-            <img src="{$starFile}" alt="starFile"/>
-            <xsl:call-template name="drawStars">
-                <xsl:with-param name="starCount" select="$starCount - 1"/>
-                <xsl:with-param name="starFile" select="$starFile"/>
-            </xsl:call-template>
-        </xsl:if>
-    </xsl:template>
 
 </xsl:stylesheet>
