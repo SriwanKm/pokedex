@@ -3,9 +3,9 @@
 <!--   Pokemon catalogue-->
 <!--   Author: Sriwan Khaomuang-->
 <!--   Date:   12/14/2020-->
-
 <!--   Filename: pokemon.xml-->
 
+<!DOCTYPE pokedex SYSTEM "pokedex.dtd">
 <?xml-stylesheet type="text/xsl" href="pokemon.xsl" ?>
 
 <pokedex>
@@ -86,7 +86,7 @@
         </abilities>
         <baseExp>165</baseExp>
         <growthRate>Medium Fast</growthRate>
-        <img>zeraora.jpg</img>
+        <img>galvantula.jpg</img>
 
 
     </pokemon>
@@ -99,7 +99,7 @@
         </types>
         <species>Thunderclap Pokémon</species>
         <gen>8</gen>
-        <abilities hidden="-">
+        <abilities>
             <ability>Volt Absorb</ability>
         </abilities>
         <baseExp>270</baseExp>

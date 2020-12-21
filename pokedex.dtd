@@ -1,0 +1,26 @@
+<!--Jenna's DVD library-->
+        <!--author: Sriwan Khaomuang-->
+        <!--date: 12/17/20-->
+        <!--filename: pokedex.dtd-->
+
+        <!ELEMENT pokedex (pokemon+)>
+        <!ELEMENT pokemon (types, species, gen, abilities, baseExp, growthRate, img)>
+        <!ATTLIST pokemon name CDATA #REQUIRED>
+
+        <!ELEMENT types (type+)>
+        <!ELEMENT abilities (ability+)>
+        <!ATTLIST abilities hidden CDATA #IMPLIED>
+
+        <!ELEMENT type (#PCDATA)>
+        <!ELEMENT species (#PCDATA)>
+        <!ELEMENT gen (#PCDATA)>
+        <!ELEMENT ability (#PCDATA)>
+        <!ELEMENT baseExp (#PCDATA)>
+        <!ELEMENT growthRate (#PCDATA)>
+        <!ELEMENT img (#PCDATA)>
+
+
+
+
+
+

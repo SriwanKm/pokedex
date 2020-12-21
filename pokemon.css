@@ -10,21 +10,35 @@ body {
     background-size: cover;
 }
 
+#navlogo {
+    /*position: absolute;*/
+}
+
+/*#navbar {*/
+/*    display: contents;*/
+/*}*/
+
 #pokeball {
     height: 60px;
     margin-top: 15px;
 }
 
 #logo {
-    height: 80px
+    height: 80px;
 }
+
+/*#menu {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
 
 header {
     background-color: rgba(28, 28, 27, 0.5);
-    height: 100px;
-    padding: 10px 0 0 20px;
-    /*border-bottom: #4a4a4a 8px solid;*/
+    height: fit-content;
+    padding: 10px 20px 10px 20px;
     font-family: 'Press Start 2P', cursive;
+    background-size: cover;
+    /*width: 100%;*/
 
 
 }
@@ -50,12 +64,19 @@ header {
 
 }
 
-div {
-    display: flex;
-}
+/*div {*/
+/*    display: flex;*/
+/*}*/
 
 table {
     text-align: center;
+}
+
+#menu-table {
+    /*margin-left: 500px;*/
+    justify-content: flex-start;
+    display: flex;
+    /*grid-template-columns: repeat(4, 1fr);*/
 }
 
 #menu-table tr .menu-icon {
@@ -63,61 +84,61 @@ table {
     height: 100px;
 }
 
-.menu {
-    margin-left: 500px;
-
-}
-
 
 .pic {
     width: 300px;
     height: 270px;
-    margin-bottom: 10px;
 }
 
-#data-table, #grid-container {
-    margin: 50px auto;
-    width: 1000px;
-    border-spacing: 50px 50px;
-}
+/*!*#grid-container {*!*/
+/*!*    margin: 50px auto;*!*/
+/*!*    !*width: 1000px;*!*!*/
+/*!*    border-spacing: 50px 50px;*!*/
+/*!*}*!*/
 
 #grid-container {
-    margin: 100px 0 50px 190px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px 50px;
+    margin: 50px auto;
+    justify-items: center;
+    width: fit-content;
+
 }
 
 #grid-container .outer-electric {
     background-color: #e5db78;
     border: dimgray solid 5px;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 5px;
+    padding: 0 10px;
+
 }
 
-#data-table tr .outer-grass {
+#grid-container .outer-grass {
     background-color: #67af82;
     border: dimgray solid 5px;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 5px;
+    padding: 0 10px;
+    /*width: fit-content;*/
 }
 
-#data-table tr .outer-water {
+#grid-container .outer-water {
     background-color: #52a5ae;
     border: dimgray solid 5px;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 5px;
+    padding: 0 10px;
 }
 
-#data-table tr .outer-fairy {
+#grid-container .outer-fairy {
     background-color: #d691c5;
     border: #dfdfdf solid 5px;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 5px;
+    padding: 0 10px;
 }
 
-#data-table tr .outer-fairy:hover, #data-table tr .outer-water:hover, #data-table tr .outer-grass:hover, #grid-container .outer-electric:hover {
-    box-shadow: #2b2b2b 0px 3px 8px 5px;
+#grid-container .outer-fairy:hover, #grid-container .outer-water:hover, #grid-container .outer-grass:hover,
+#grid-container .outer-electric:hover {
+    box-shadow: #2b2b2b 0 3px 8px 5px;
 }
 
 a {
@@ -130,9 +151,9 @@ a {
     margin: auto;
     text-align: left;
     font-size: small;
-    border: #2b2b2b solid 1px;
     padding: 5px;
     border-radius: 5px;
+
 }
 
 .sub-dataTable th {
@@ -141,7 +162,6 @@ a {
     padding: 20px;
     color: #ffffff;
     font-size: large;
-    /*border: #2b2b2b solid 1px;*/
 
 }
 
@@ -163,14 +183,16 @@ a {
 
 .sub-dataTable td:nth-child(odd) {
     font-family: 'Press Start 2P', cursive;
-    /*border: #2b2b2b solid 1px;*/
+    border: #2b2b2b solid 1px;
+    padding-left: 5px;
     /*width: 300px;*/
 }
 
 .sub-dataTable td:nth-child(even) {
     font-family: 'Prompt', sans-serif;
-    /*border: #2b2b2b solid 1px;*/
-
+    border: #2b2b2b solid 1px;
+    padding-left: 5px;
+    width: 100px;
 }
 
 footer {
@@ -179,4 +201,21 @@ footer {
     letter-spacing: 5px;
     text-align: center;
     color: #e9e9e9;
+    font-size: 18px;
+    display: flex;
+    height: 50px;
+}
+
+#footer-div {
+    margin: auto;
+    align-self: flex-end;
+}
+
+@media only screen and (max-device-width: 600px) {
+    #grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 50px 50px;
+    }
+    
 }

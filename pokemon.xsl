@@ -13,7 +13,6 @@
 
     <xsl:output method="html" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes"/>
 
-    <!--    <xsl:variable name="currentYear" select="2020"/>-->
 
     <xsl:template match="/">
         <html lang="en">
@@ -25,40 +24,38 @@
             </head>
             <body>
                 <header>
-                    <div>
-                        <div>
-                            <img id="pokeball" alt="logo" src="images/pokeball.png"/>
-                            <img id="logo" alt="logo" src="images/pokemon_text.png"/>
-                        </div>
-                        <div class="menu">
-                            <table id="menu-table">
-                                <tr>
-                                    <td class="menu-icon">
-                                        <a href="pokemon.xml"><img alt="elec" src="images/pikachu.png"/>Electric
-                                        </a>
-                                    </td>
-                                    <td class="menu-icon">
-                                        <a href="grass.html"><img alt="grass" src="images/caterpie.png"/>Grass
-                                        </a>
-                                    </td>
-                                    <td class="menu-icon">
-                                        <a href="water.html"><img alt="water" src="images/dratini.png"/>Water
-                                        </a>
-                                    </td>
-                                    <td class="menu-icon">
-                                        <a href="fairy.html"><img alt="psychic" src="images/jigglypuff.png"/>Fairy
-                                        </a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
+                    <div id="navbar">
+
+                        <table id="menu-table">
+                            <tr>
+                                <td id="navlogo">
+                                    <img id="pokeball" alt="logo" src="images/pokeball.png"/>
+                                    <img id="logo" alt="logo" src="images/pokemon_text.png"/>
+                                </td>
+                                <td class="menu-icon">
+                                    <a href="pokemon.xml"><img alt="elec" src="images/pikachu.png"/>Electric
+                                    </a>
+                                </td>
+                                <td class="menu-icon">
+                                    <a href="grass.html"><img alt="grass" src="images/caterpie.png"/>Grass
+                                    </a>
+                                </td>
+                                <td class="menu-icon">
+                                    <a href="water.html"><img alt="water" src="images/dratini.png"/>Water
+                                    </a>
+                                </td>
+                                <td class="menu-icon">
+                                    <a href="fairy.html"><img alt="psychic" src="images/jigglypuff.png"/>Fairy
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </header>
 
                 <section>
                     <div>
-<!--                        <div id="data-table">-->
-                            <div id="grid-container">
+                        <div id="grid-container">
 
                             <xsl:apply-templates select="pokedex/pokemon">
                                 <xsl:sort select="gen"/>
@@ -68,7 +65,9 @@
                     </div>
                 </section>
                 <footer>
-                    By Sriwan Khaomuang
+                    <div id="footer-div">
+                        By Sriwan Khaomuang
+                    </div>
                 </footer>
             </body>
         </html>
@@ -77,70 +76,71 @@
 
     <xsl:template match="pokemon">
 
-            <div class="outer-electric">
+        <div class="outer-electric">
 
-                <table class="sub-dataTable">
 
-                    <tr>
-                        <th id="electric" colspan="2">
-                            <xsl:value-of select="@name"/>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <img class="pic" src="images/{img}" alt="{img}"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Generation</td>
-                        <td>
-                            <xsl:value-of select="gen"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Type</td>
-                        <td>
-                            <xsl:for-each select="types/type">
-                                <xsl:value-of select="."/>
-                            </xsl:for-each>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Species</td>
-                        <td>
-                            <xsl:value-of select="species"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Abilities</td>
-                        <td>
-                            <xsl:for-each select="abilities/ability">
-                                <xsl:value-of select="."/>
-                            </xsl:for-each>
-                        </td>
+            <table class="sub-dataTable">
 
-                    </tr>
+                <tr>
+                    <th id="electric" colspan="2">
+                        <xsl:value-of select="@name"/>
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <img class="pic" src="images/{img}" alt="{img}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Generation</td>
+                    <td>
+                        <xsl:value-of select="gen"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>
+                        <xsl:for-each select="types/type">
+                            <xsl:value-of select="."/>
+                        </xsl:for-each>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Species</td>
+                    <td>
+                        <xsl:value-of select="species"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Abilities</td>
+                    <td>
+                        <xsl:for-each select="abilities/ability">
+                            <xsl:value-of select="."/>
+                        </xsl:for-each>
+                    </td>
 
-                    <tr>
-                        <td>Hidden ability</td>
-                        <td>
-                            <xsl:value-of select="abilities/@hidden"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Base Exp.</td>
-                        <td>
-                            <xsl:value-of select="baseExp"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Growth Rate</td>
-                        <td>
-                            <xsl:value-of select="growthRate"/>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+                </tr>
+
+                <tr>
+                    <td>Hidden ability</td>
+                    <td>
+                        <xsl:value-of select="abilities/@hidden"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Base Exp.</td>
+                    <td>
+                        <xsl:value-of select="baseExp"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Growth Rate</td>
+                    <td>
+                        <xsl:value-of select="growthRate"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
 
     </xsl:template>
